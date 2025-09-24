@@ -33,5 +33,6 @@ void ALobbyPlayerController::Server_HandleChangeNickname_Implementation(const FT
 	ALobbyPlayerState* LobbyPlayerState = Cast<ALobbyPlayerState>(GetPawn()->GetPlayerState());
 	if (LobbyPlayerState) {
 		LobbyPlayerState->Nickname = InNickname;
+		LobbyPlayerState->RefreshLobbyUI();
 	}
 }

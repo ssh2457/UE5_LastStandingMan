@@ -24,6 +24,7 @@ bool ULobbyWidget::Initialize()
 void ULobbyWidget::SetInfo()
 {
 	// Clear Children
+	UserList->ClearChildren();
 	LobbyUsers.Empty();
 
 	// Create child Widget
