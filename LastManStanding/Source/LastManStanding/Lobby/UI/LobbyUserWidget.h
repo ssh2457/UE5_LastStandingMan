@@ -30,7 +30,7 @@ protected:
 	TObjectPtr<UTextBlock> Txt_Ready;
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
-	TObjectPtr<UTextBlock> Txt_PlayerName;
+	TObjectPtr<UTextBlock> Label_Ready;
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 	TObjectPtr<UEditableTextBox> Editable_PlayerName;

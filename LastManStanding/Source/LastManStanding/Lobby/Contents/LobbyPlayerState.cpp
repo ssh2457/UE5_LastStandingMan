@@ -14,7 +14,7 @@ void ALobbyPlayerState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
 
 void ALobbyPlayerState::Multicast_Ready_Implementation()
 {
-	Ready = true;
+	Ready = !Ready;
 	RefreshLobbyUI();
 }
 

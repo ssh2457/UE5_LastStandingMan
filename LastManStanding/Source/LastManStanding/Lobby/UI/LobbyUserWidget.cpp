@@ -37,7 +37,7 @@ void ULobbyUserWidget::RefreshUI()
 	Btn_Ready->SetVisibility(ESlateVisibility::Hidden);
 	Btn_KickPlayer->SetVisibility(ESlateVisibility::Hidden);
 	Txt_Ready->SetVisibility(ESlateVisibility::Hidden);
-	Txt_PlayerName->SetVisibility(ESlateVisibility::Hidden);
+	Label_Ready->SetVisibility(ESlateVisibility::Hidden);
 	Editable_PlayerName->SetVisibility(ESlateVisibility::Hidden);
 
 	// Show ready Text
@@ -46,8 +46,12 @@ void ULobbyUserWidget::RefreshUI()
 	}
 
 	// Show Ready Button
-	if (isLocalPlayer && !isReady) {
+	if (isLocalPlayer) {
 		Btn_Ready->SetVisibility(ESlateVisibility::Visible);
+		Label_Ready->SetVisibility(ESlateVisibility::Visible);
+
+		FString NextReadyStatus = (isReady == true) ? TEXT("UnReady") : TEXT("Ready");
+		Label_Ready->SetText(FText::FromString(NextReadyStatus));
 	}
 
 	// Show Kick Button
